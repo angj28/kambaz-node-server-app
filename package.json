@@ -28,7 +28,11 @@
   },
   "homepage": "https://github.com/angj28/kambaz-react-web-app/tree/main#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2",
     "uuid": "^11.1.0"
+  },
+  "engines": {
+    "go": "1.19"
   }
 }
