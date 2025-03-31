@@ -28,7 +28,7 @@ const sessionOptions = {
   },
 };
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "development") {
   sessionOptions.proxy = true;
   sessionOptions.cookie.sameSite = "none";
   sessionOptions.cookie.secure = true;
@@ -36,6 +36,7 @@ if (process.env.NODE_ENV === "production") {
     sessionOptions.cookie.domain = process.env.NODE_SERVER_DOMAIN;
   }
 }
+app.set("trust proxy", 1);
 app.use(session(sessionOptions));
 app.use(express.json());
 UserRoutes(app);
